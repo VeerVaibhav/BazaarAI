@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.37)];
+  }
+  
+  .glass-light {
+    @apply bg-white/40 backdrop-blur-md border border-white/20 shadow-xl;
+  }
+
+  .cinematic-text {
+    @apply tracking-widest uppercase font-light text-xs text-neutral-500;
+  }
+
+  .btn-cinematic {
+    @apply px-8 py-3 bg-neutral-900 text-white hover:bg-neutral-800 transition-all duration-500 tracking-widest uppercase text-xs font-bold;
+  }
+}
+
+:root {
+  --background: #fafafa;
+  --foreground: #1a1a1a;
+  --accent: #c5a358; /* Muted Gold for cinematic feel */
+}
+
+.dark {
+  --background: #050505;
+  --foreground: #f0f0f0;
+}
